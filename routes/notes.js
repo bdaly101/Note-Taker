@@ -30,5 +30,24 @@ notes.post('/', (req, res) => {
       res.error('Error in adding note');
     }
   });
+
+  // DELETE Route for a note by id
+notes.delete('/:id', (req, res) => {
+  const noteId = req.params.id;
+  readFromFile('./db/db.json')
+      .then((data) => JSON.parse(data))
+      .then((json) => {
+          // Filter out the note with the id to delete
+          const result = json.filter((note) => note.id !== noteId);
+
+          // Write back the remaining notes
+          writeToFile('./db/db.json', result);
+
+          res.json(`Note with id ${noteId} has been deleted`);
+      })
+      .catch((err) => {
+          res.error('Error in deleting note');
+      });
+});
   
   module.exports = notes;
