@@ -1,1 +1,4 @@
 # Note-Taker
+
+## Description
+The Note Taker application is an innovative tool designed to assist small business owners in managing their tasks and ideas through a user-friendly interface for writing and saving notes. The core of the application is powered by an Express.js back end, which is responsible for handling data management tasks, including saving to and retrieving note data from a JSON file. The application is deployed to Heroku, making it accessible anywhere and anytime. This setup allows users to effortlessly create, save, and manage their notes, enhancing their ability to organize thoughts and keep track of essential tasks with ease. The Note Taker app embodies a practical application of web technologies, offering a straightforward solution for note management.
